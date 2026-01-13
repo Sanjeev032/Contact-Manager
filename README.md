@@ -9,7 +9,8 @@ This project provides a minimal but complete CRUD contacts manager:
 - Backend exposes a REST API at `/api/contacts` for managing contacts.
 - Frontend is a single-page HTML/JS UI that consumes the API with `fetch` and updates the page without reloads.
 - Contacts have validation on both frontend and backend (name, email, phone).
-
+## AI
+used Gemini Ai for faster development due to time constraint
 ### Tech Stack
 
 - **Backend**: Node.js, Express
