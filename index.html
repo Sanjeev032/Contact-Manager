@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Contacts Manager</h1>
+        </header>
+
+        
+        <div id="message" class="message hidden"></div>
+
+        
+        <section class="form-section">
+            <h2 id="form-title">Add New Contact</h2>
+            <form id="contact-form">
+                <input type="hidden" id="contact-id" value="">
+                
+                <div class="form-group">
+                    <label for="name">Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" required>
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone <span class="required">*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn">Add Contact</button>
+                    <button type="button" id="cancel-btn" class="btn-cancel hidden">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        
+        <section class="contacts-section">
+            <h2>Contacts</h2>
+            <div class="contacts-toolbar">
+                <div class="search-group">
+                    <label for="search-input">Search</label>
+                    <input type="text" id="search-input" placeholder="Search by name or email">
+                </div>
+                <div class="sort-group">
+                    <label for="sort-select">Sort by</label>
+                    <select id="sort-select">
+                        <option value="name-asc">Name (A → Z)</option>
+                        <option value="name-desc">Name (Z → A)</option>
+                        <option value="email-asc">Email (A → Z)</option>
+                        <option value="email-desc">Email (Z → A)</option>
+                    </select>
+                </div>
+            </div>
+            <div id="loading" class="loading">Loading contacts...</div>
+            <div id="contacts-container">
+                <table id="contacts-table" class="hidden">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Created</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contacts-tbody">
+                        
+                    </tbody>
+                </table>
+                <div id="no-contacts" class="no-contacts hidden">
+                    <p>No contacts found. Add your first contact above!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

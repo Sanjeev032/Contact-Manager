@@ -1,0 +1,6 @@
+node_modules/
+contacts.db
+contacts.db-journal
+.env
+*.log
+
